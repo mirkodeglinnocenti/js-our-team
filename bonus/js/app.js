@@ -18,37 +18,38 @@ const dipendenti = [
 		firstName: 'Wayne',
 		lastName: 'Barnett',
         role: 'Founder & CEO',
-		img: 'wayne-barnett-founder-ceo.jpg'
+		img: './img/wayne-barnett-founder-ceo.jpg'
 	},
     {
 		firstName: 'Angela',
 		lastName: 'Caroll',
         role: 'Chief Editor',
-		img: 'angela-caroll-chief-editor.jpg'
+		img: './img/angela-caroll-chief-editor.jpg'
 	},
     {
 		firstName: 'Walter',
 		lastName: 'Gordon',
         role: 'Office Manager',
-		img: 'walter-gordon-office-manager.jpg'
+		img: './img/walter-gordon-office-manager.jpg'
 	},
     {
 		firstName: 'Angela',
 		lastName: 'Lopez',
         role: 'Social Media Manager',
-		img: 'angela-lopez-social-media-manager.jpg'
+		img: './img/angela-lopez-social-media-manager.jpg'
 	},
     {
 		firstName: 'Scott',
 		lastName: 'Estrada',
         role: 'Developer',
-		img: 'scott-estrada-developer.jpg'
+		img: './img/scott-estrada-developer.jpg'
 	},
     {
 		firstName: 'Barbara',
 		lastName: 'Ramos',
         role: 'Graphic Designer',
-		img: 'barbara-ramos-graphic-designer.jpg'
+		// img: './img/barbara-ramos-graphic-designer.jpg'
+        img: getImage ("barbara-ramos-graphic-designer.jpg" , foto1)
 	},
 ]
 
@@ -84,6 +85,23 @@ for ( let i = 0; i < dipendenti.length; i++ ) {
 }
 
 
+// prendo elemento da html
+// const foto = document.getElementById("foto").src = "./img/wayne-barnett-founder-ceo.jpg";
+// creo l'elemento img
+// let img = document.createElement("img");
+// // assegno un src all'img
+// img.src = "./img/wayne-barnett-founder-ceo.jpg";
+// // adesso lo mostro su html
+// foto.append(img); 
+
+// document.getElementById("myImg").src = "hackanm.gif";
 
 
+
+
+
+// function getImage (immagine , doveStampare) {
+//     const fotoElement = document.getElementById("doveStampare").src = "./img/immagine";
+
+// }
 
