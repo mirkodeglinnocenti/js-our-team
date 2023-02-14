@@ -48,8 +48,8 @@ const dipendenti = [
 		firstName: 'Barbara',
 		lastName: 'Ramos',
         role: 'Graphic Designer',
-		// img: './img/barbara-ramos-graphic-designer.jpg'
-        img: getImage ("barbara-ramos-graphic-designer.jpg" , foto1)
+		img: './img/barbara-ramos-graphic-designer.jpg'
+        
 	},
 ]
 
@@ -57,7 +57,7 @@ for (let key in dipendenti) {
     console.log(dipendenti[key]);
 }
 
-const dipendenteTableEl = document.getElementById("dipendente");
+const dipendenteCardEl = document.getElementById("card");
 
 for ( let i = 0; i < dipendenti.length; i++ ) {
 
@@ -71,18 +71,47 @@ for ( let i = 0; i < dipendenti.length; i++ ) {
     console.log("Ruolo:", role)
     console.log("Foto:", img)
 
-        
-    const tr = `
-    <tr>
-        <td>${name}</td>
-        <td>${role}</td>
-        <td>${img}</td>
-    </tr>
-    `;
 
-    dipendenteTableEl.innerHTML += tr;
+    const card = `
+    <div class="card col-6">
+        <img src="${img}" class="card-img-top" alt="foto">
+        <div class="card-body">
+            <h5 class="card-title">${name}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">${role}</li>
+        </ul>
+    </div>
+  `;
 
+  dipendenteCardEl.innerHTML += card;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // prendo elemento da html
@@ -105,3 +134,4 @@ for ( let i = 0; i < dipendenti.length; i++ ) {
 
 // }
 
+// img: getImage ("barbara-ramos-graphic-designer.jpg" , foto1)
