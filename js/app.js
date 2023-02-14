@@ -49,4 +49,46 @@ const dipendenti = [
 	},
 ]
 
-console.log(dipendenti)
+for (let key in dipendenti) {
+    console.log(dipendenti[key]);
+}
+
+const dipendenteTableEl = document.getElementById("dipendente");
+
+for ( let i = 0; i < dipendenti.length; i++ ) {
+
+    let dipendente = dipendenti[i];
+    let name = dipendente.firstName + " " + dipendente.lastName;
+    let role = dipendente.role;
+    let img = dipendente.img;
+
+
+    console.log("Nome:", name)
+    console.log("Ruolo:", role)
+    console.log("Foto:", img)
+
+        
+    const tr = `
+    <tr>
+        <td>${name}</td>
+        <td>${role}</td>
+        <td>${img}</td>
+    </tr>
+    `;
+
+    dipendenteTableEl.innerHTML += tr;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
